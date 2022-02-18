@@ -35,7 +35,7 @@ This tool will create Python project with the following features:
 Install ppw if you haven't install it yet:
 
 ```
-  pip install -U ppw
+  pip install -U git+https://github.com/ma7555/cookiecutter-pypackage
 ```
 
 Generate a Python package project by simple run:
