@@ -37,7 +37,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-region: us-east-1
-          role-to-assume: ${{ secrets.PROD_ROLE_ARN }}
+          role-to-assume: ${{ secrets.PROD_CODEARTIFACT_ROLE_ARN }}
           role-session-name: RepoPublishPackage
           role-duration-seconds: 900
 
@@ -95,5 +95,5 @@ jobs:
 
       - name: publish to prod
         run: |
-          aws codeartifact login --tool twine --domain my-core --repository my-pip
+          aws codeartifact login --tool twine --domain innovative-core --repository innovative-pip
           twine upload --repository codeartifact dist/*
