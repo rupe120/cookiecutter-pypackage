@@ -48,7 +48,7 @@ Then follow **[Tutorial](https://innovativeSol.github.io/innovative-pip-cookiecu
 
 # Credits
 
-This repo is forked from [audreyr/innovative-pip-cookiecutter-pypackage](https://github.com/audreyr/innovative-pip-cookiecutter-pypackage), and borrowed some ideas from [briggySmalls](https://github.com/briggySmalls/innovative-pip-cookiecutter-pypackage)
+This repo is forked from [zillionare/cookiecutter-pypackage](https://github.com/zillionare/cookiecutter-pypackage), and borrowed some updates from [ma7555](https://github.com/ma7555/cookiecutter-pypackage)
 
 
 [poetry]: https://python-poetry.org/
