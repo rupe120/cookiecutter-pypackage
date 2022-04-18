@@ -3,11 +3,11 @@
 A tool for creating skeleton python project, built with popular develop tools and 
 conform to best practice.
 
-[![Version](http://img.shields.io/pypi/v/ppw?color=brightgreen)](https://pypi.python.org/pypi/ppw)
+[![Version](http://img.shields.io/pypi/v/aws_ppw?color=brightgreen)](https://pypi.python.org/pypi/aws_ppw)
 [![CI Status](https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage/actions/workflows/release.yml/badge.svg)](https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage)
-[![Dowloads](https://img.shields.io/pypi/dm/ppw)](https://pypi.org/project/ppw/)
-[![License](https://img.shields.io/pypi/l/ppw)](https://opensource.org/licenses/BSD-2-Clause)
-![Python Versions](https://img.shields.io/pypi/pyversions/ppw)
+[![Dowloads](https://img.shields.io/pypi/dm/aws_ppw)](https://pypi.org/project/aws_ppw/)
+[![License](https://img.shields.io/pypi/l/aws_ppw)](https://opensource.org/licenses/BSD-2-Clause)
+![Python Versions](https://img.shields.io/pypi/pyversions/aws_ppw)
 
 
 ## Features
@@ -32,7 +32,7 @@ This tool will create Python project with the following features:
 
 ## Quickstart
 
-Install ppw if you haven't install it yet:
+Install aws_ppw if you haven't install it yet:
 
 ```
   pip install -U git+https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage
@@ -41,7 +41,7 @@ Install ppw if you haven't install it yet:
 Generate a Python package project by simple run:
 
 ```
-  ppw
+  aws_ppw
 ```
 
 Then follow **[Tutorial](https://innovativeSol.github.io/innovative-pip-cookiecutter-pypackage/tutorial/)** to finish other configurations.

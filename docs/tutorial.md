@@ -10,12 +10,12 @@ tutorial.
 If you are new to Git and GitHub, you should probably spend a few minutes on
 some of the tutorials at the top of the page at [GitHub Help]
 
-## Step 1: Install Python Project Wizard (ppw)
+## Step 1: Install Python Project Wizard (aws_ppw)
 
-Install ppw:
+Install aws_ppw:
 
 ``` bash
-pip install ppw
+pip install aws_ppw
 ```
 
 ## Step 2: Generate Your Package
@@ -25,7 +25,7 @@ Now it's time to generate your Python package.
 Run the following command and feed with answers:
 
 ```bash
-  ppw
+  aws_ppw
 ```
 
 Finally a new folder will be created under current folder, the name is the answer you
