@@ -29,6 +29,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: us-east-1
+          role-to-assume: ${{ secrets.PROD_ROLE_ARN }}
+          role-session-name: RepoPublishPackage
+          role-duration-seconds: 900
+
       - name: generate change log
         uses: heinrichreimer/github-changelog-generator-action@v2.1.1
         with:
@@ -81,9 +89,7 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: publish to PYPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
-          skip_existing: true
+      - name: publish to prod
+        run: |
+          aws codeartifact login --tool twine --domain my-core --repository my-pip
+          twine upload --repository codeartifact dist/*
