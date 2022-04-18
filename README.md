@@ -4,7 +4,7 @@ A tool for creating skeleton python project, built with popular develop tools an
 conform to best practice.
 
 [![Version](http://img.shields.io/pypi/v/ppw?color=brightgreen)](https://pypi.python.org/pypi/ppw)
-[![CI Status](https://github.com/zillionare/cookiecutter-pypackage/actions/workflows/release.yml/badge.svg)](https://github.com/zillionare/cookiecutter-pypackage)
+[![CI Status](https://github.com/innovativeSol/cookiecutter-pypackage/actions/workflows/release.yml/badge.svg)](https://github.com/innovativeSol/cookiecutter-pypackage)
 [![Dowloads](https://img.shields.io/pypi/dm/ppw)](https://pypi.org/project/ppw/)
 [![License](https://img.shields.io/pypi/l/ppw)](https://opensource.org/licenses/BSD-2-Clause)
 ![Python Versions](https://img.shields.io/pypi/pyversions/ppw)
@@ -35,7 +35,7 @@ This tool will create Python project with the following features:
 Install ppw if you haven't install it yet:
 
 ```
-  pip install -U git+https://github.com/ma7555/cookiecutter-pypackage
+  pip install -U git+https://github.com/innovativeSol/cookiecutter-pypackage
 ```
 
 Generate a Python package project by simple run:
@@ -44,7 +44,7 @@ Generate a Python package project by simple run:
   ppw
 ```
 
-Then follow **[Tutorial](https://zillionare.github.io/cookiecutter-pypackage/tutorial/)** to finish other configurations.
+Then follow **[Tutorial](https://innovativeSol.github.io/cookiecutter-pypackage/tutorial/)** to finish other configurations.
 
 # Credits
 

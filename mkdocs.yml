@@ -1,5 +1,5 @@
 site_name: Python Project Wizard (ppw)
-repo_url: https://github.com/zillionare/cookiecutter-pypackage
+repo_url: https://github.com/innovativeSol/cookiecutter-pypackage
 repo_name: Python Project Wizard
 nav:
   - Introduction: index.md
@@ -50,7 +50,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/zillionare
+      link: https://github.com/innovativeSol
       name: Github
     - icon: material/email
       link: "mailto:code@jieyu.ai"

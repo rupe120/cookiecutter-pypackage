@@ -223,7 +223,7 @@ new artifact is published under the name {{ cookiecutter.project_slug }}
   result at [PYPI].
 
 
-[Edit this file]: https://github.com/zillionare/cookiecutter-pypackage/blob/master/docs/tutorial.md
+[Edit this file]: https://github.com/innovativeSol/cookiecutter-pypackage/blob/master/docs/tutorial.md
 [Codecov]: https://codecov.io/
 [PYPI]: https://pypi.org
 [GitHub]: https://github.com/
