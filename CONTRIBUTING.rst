@@ -13,7 +13,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/audreyr/cookiecutter-pypackage/issues
+Report bugs at https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage/issues
 
 If you are reporting a bug, please include:
 
@@ -44,7 +44,7 @@ Submit Feedback
 ~~~~~~~~~~~~~~~
 
 The best way to send feedback is to file an issue at
-https://github.com/audreyr/cookiecutter-pypackage/issues.
+https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage/issues.
 
 If you are proposing a new feature:
 
