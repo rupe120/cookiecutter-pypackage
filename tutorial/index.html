@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-6.2.8">
     
     
       
@@ -22,10 +22,6 @@
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#02a6f2">
         
       
     
@@ -49,10 +45,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
       
   
     
@@ -134,7 +132,7 @@
     
       <div class="md-header-nav__source">
         
-<a href="https://github.com/zillionare/cookiecutter-pypackage/" title="Go to repository" class="md-source">
+<a href="https://github.com/zillionare/cookiecutter-pypackage" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
@@ -264,7 +262,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/zillionare/cookiecutter-pypackage/" title="Go to repository" class="md-source">
+<a href="https://github.com/zillionare/cookiecutter-pypackage" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
@@ -614,7 +612,9 @@
                   <h1>Tutorial</h1>
                 
                 <h2 id="tutorial">Tutorial<a class="headerlink" href="#tutorial" title="Permanent link">&para;</a></h2>
-<details class="note"><summary>Note</summary><p>Did you find this article confusing? <a href="https://github.com/zillionare/cookiecutter-pypackage/blob/master/docs/tutorial.md">Edit this file</a> and pull a request!</p>
+<details class="note">
+<summary>Note</summary>
+<p>Did you find this article confusing? <a href="https://github.com/zillionare/cookiecutter-pypackage/blob/master/docs/tutorial.md">Edit this file</a> and pull a request!</p>
 </details>
 <p>To start with, you will need <a href="https://github.com/">GitHub</a>, <a href="https://pypi.org">Pypi</a> , <a href="https://test.pypi.org/">TestPyPi</a> and <a href="https://codecov.io/">Codecov</a> account. If 
 you don't have one, please follow the links to apply one before you get started on this 
@@ -723,8 +723,10 @@ always in that environment from now on.</p>
 <p>You can choose either annaconda or virtualenv. I prefer annaconda (actually miniconda) 
 though.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>conda create -n mypackage python=3.8
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>conda create -n mypackage python=3.8
 conda activate mypackage
+conda install -c conda-forge tox-conda
 </code></pre></div>
 </td></tr></table>
 <p>You could choose your favorite python version here. </p>
@@ -745,12 +747,16 @@ installed extra dependency need by developer, such as documentation build tools,
 formatting and test tools etc.</p>
 <p>We also launch a smoke test here by running <code>tox</code>. This will give you a test report and
  lint report. You should see no errors except some lint warnings.</p>
-<details class="tips"><summary>Tips</summary><p>Extra dependencies are grouped into three groups, doc, dev and test for better 
+<details class="tips">
+<summary>Tips</summary>
+<p>Extra dependencies are grouped into three groups, doc, dev and test for better 
 granularity. When you ship the package, dependencies in group doc, dev and test 
 might not be shipped.</p>
 <p>As the developer, you will need install all the dependencies.</p>
 </details>
-<details class="tips"><summary>Tips</summary><p>if you found erros like the following during tox run:
+<details class="tips">
+<summary>Tips</summary>
+<p>if you found erros like the following during tox run:
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ERROR: InterpreterNotFound: python3.9
 </code></pre></div>
 </td></tr></table>
@@ -771,7 +777,9 @@ cookiecutter.</p>
 <li>PERSONAL_TOKEN, see <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">How to apply personal token</a></li>
 </ul>
 <h3 id="step-6-set-up-codecov-integration">Step 6: Set Up codecov integration<a class="headerlink" href="#step-6-set-up-codecov-integration" title="Permanent link">&para;</a></h3>
-<details class="tips" open="open"><summary>Tips</summary><p>If you have already setup codecov integration and configured access for all your 
+<details class="tips" open="open">
+<summary>Tips</summary>
+<p>If you have already setup codecov integration and configured access for all your 
 repositories, you can skip this step.</p>
 </details>
 <p>In your browser, visit <a href="https://github.com/apps/codecov">install codecov app</a>, you'll be landed at this page:</p>
@@ -801,7 +809,9 @@ git push -u origin main
 package name.</p>
 <p>You'll need a ssh key to push the repo. You can <a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">Generate</a> a key or
 <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">Add</a> an existing one.</p>
-<details class="warning" open="open"><summary>Warning</summary><p>if you answered 'yes' to the question if install pre-commit hooks at last step, 
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>if you answered 'yes' to the question if install pre-commit hooks at last step, 
 then you should find pre-commit be invoked when you run <code>git commit</code>, and some files
  may be modified by hooks. If so, please add these files and <strong>commit again</strong>.</p>
 </details>
@@ -913,7 +923,7 @@ new artifact is published under the name {{ cookiecutter.project_slug }}</p>
     </div>
     
       <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
-      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
