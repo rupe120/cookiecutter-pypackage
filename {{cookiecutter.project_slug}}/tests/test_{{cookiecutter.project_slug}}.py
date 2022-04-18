@@ -18,7 +18,7 @@ def response():
     See more at: http://doc.pytest.org/en/latest/fixture.html
     """
     # import requests
-    # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
+    # return requests.get('https://github.com/audreyr/innovative-pip-cookiecutter-pypackage')
 
 
 def test_content(response):

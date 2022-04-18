@@ -1,5 +1,5 @@
 site_name: Python Project Wizard (ppw)
-repo_url: https://github.com/innovativeSol/cookiecutter-pypackage
+repo_url: https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage
 repo_name: Python Project Wizard
 nav:
   - Introduction: index.md

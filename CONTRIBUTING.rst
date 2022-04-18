@@ -69,7 +69,7 @@ development. Please note this documentation assumes you already have
    .. code-block:: bash
 
     $ cd path_for_the_repo
-    $ git clone git@github.com:YOUR_NAME/cookiecutter-pypackage.git
+    $ git clone git@github.com:YOUR_NAME/innovative-pip-cookiecutter-pypackage.git
 
 ::
 
@@ -230,7 +230,7 @@ To write and run your new test, follow these steps:
 6. Rerun your test and confirm that your test passes. If it passes,
    congratulations!
 
-.. cookiecutter: https://github.com/audreyr/cookiecutter-pypackage
+.. cookiecutter: https://github.com/audreyr/innovative-pip-cookiecutter-pypackage
 .. virtualenv: https://virtualenv.pypa.io/en/stable/installation
 .. git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
