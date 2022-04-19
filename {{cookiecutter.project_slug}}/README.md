@@ -8,24 +8,24 @@
         alt = "Release Status">
 </a>
 
-<a href="https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions">
-    <img src="https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions/workflows/main.yml/badge.svg?branch=release" alt="CI Status">
+<a href="https://github.com/{{ cookiecutter.github_user_or_org_name }}/{{ cookiecutter.project_slug }}/actions">
+    <img src="https://github.com/{{ cookiecutter.github_user_or_org_name }}/{{ cookiecutter.project_slug }}/actions/workflows/main.yml/badge.svg?branch=release" alt="CI Status">
 </a>
 
-<a href="https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.project_slug }}/">
-    <img src="https://img.shields.io/website/https/{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.project_slug }}/index.html.svg?label=docs&down_message=unavailable&up_message=available" alt="Documentation Status">
+<a href="https://{{ cookiecutter.github_user_or_org_name }}.github.io/{{ cookiecutter.project_slug }}/">
+    <img src="https://img.shields.io/website/https/{{ cookiecutter.github_user_or_org_name }}.github.io/{{ cookiecutter.project_slug }}/index.html.svg?label=docs&down_message=unavailable&up_message=available" alt="Documentation Status">
 </a>
 {% if cookiecutter.add_pyup_badge == 'y' %}
-<a href="https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/">
-<img src="https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/shield.svg" alt="Updates">
+<a href="https://pyup.io/repos/github/{{ cookiecutter.github_user_or_org_name }}/{{ cookiecutter.project_slug }}/">
+<img src="https://pyup.io/repos/github/{{ cookiecutter.github_user_or_org_name }}/{{ cookiecutter.project_slug }}/shield.svg" alt="Updates">
 </a>
 {% endif %}
 </p>
 {% else %}
 {% if cookiecutter.add_pyup_badge == 'y' %}
 <p>
-<a href="https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/">
-<img src="https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/shield.svg" alt="Updates">
+<a href="https://pyup.io/repos/github/{{ cookiecutter.github_user_or_org_name }}/{{ cookiecutter.project_slug }}/">
+<img src="https://pyup.io/repos/github/{{ cookiecutter.github_user_or_org_name }}/{{ cookiecutter.project_slug }}/shield.svg" alt="Updates">
 </a>
 </p>
 {% endif %}
@@ -35,7 +35,7 @@
 
 {% if is_open_source %}
 * Free software: {{ cookiecutter.open_source_license }}
-* Documentation: <https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.project_slug }}/>
+* Documentation: <https://{{ cookiecutter.github_user_or_org_name }}.github.io/{{ cookiecutter.project_slug }}/>
 {% endif %}
 
 ## Features

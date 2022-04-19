@@ -12,6 +12,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+permissions:
+  id-token: write
+  contents: write
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -28,6 +32,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checks-out
         uses: actions/checkout@v2
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: {{ cookiecutter.prod_aws_region }}
+          role-to-assume: ${{ secrets.PROD_CODEARTIFACT_ROLE_ARN }}
+          role-session-name: RepoPublishPackage
+          role-duration-seconds: 900
+
       - name: "Build Changelog"
         id: build_changelog
         uses: mikepenz/release-changelog-builder-action@v2.9.0
@@ -39,7 +52,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install tox-gh-actions poetry
+          pip install tox-gh-actions poetry twine
 
       - name: pre-publish documentation
         run: |
@@ -71,9 +84,7 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: create pypi release
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
-          skip_existing: true
+      - name: publish to prod
+        run: |
+          aws codeartifact login --tool twine --domain {{ cookiecutter.prod_aws_codeartifact_domain }} --repository {{ cookiecutter.prod_aws_codeartifact_repository }}
+          twine upload --repository codeartifact dist/*

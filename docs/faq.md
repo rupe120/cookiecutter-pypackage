@@ -55,7 +55,7 @@
     email  
     Your email address.
 
-    github_username  
+    github_user_or_org_name  
     Your GitHub username.
 
     project_name  

@@ -9,7 +9,7 @@
 [tool.poetry]
 name = "{{ cookiecutter.project_slug }}"
 version = "{{ cookiecutter.version }}"
-homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
+homepage = "https://github.com/{{ cookiecutter.github_user_or_org_name }}/{{ cookiecutter.project_slug }}"
 description = "{{ cookiecutter.project_short_description }}."
 authors = ["{{ cookiecutter.full_name.replace('\"', '\\\"') }} <{{ cookiecutter.email }}>"]
 readme = "README.md"
