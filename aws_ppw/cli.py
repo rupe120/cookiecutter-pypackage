@@ -5,7 +5,7 @@ def main():
     cwd = os.path.dirname(__file__)
     package_dir = None
 
-    if sys.argv[0] == "in-place":
+    if sys.argv[1] == "in-place":
         # Skip the project folder
         package_dir = os.path.abspath(os.path.join(cwd, "../{{cookiecutter.project_slug}}/"))
 
