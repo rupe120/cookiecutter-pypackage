@@ -1,6 +1,6 @@
 site_name: {{ cookiecutter.project_name }}
 # site_url: http://www.jieyu.ai
-repo_url: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+repo_url: https://github.com/{{ cookiecutter.github_user_or_org_name }}/{{ cookiecutter.repository_name }}
 repo_name: {{ cookiecutter.project_slug }}
 #strict: true
 nav:
@@ -72,7 +72,7 @@ extra:
       link: http://www.jieyu.ai
       name: Facebook
     - icon: fontawesome/brands/github
-      link: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+      link: https://github.com/{{ cookiecutter.github_user_or_org_name }}/{{ cookiecutter.repository_name }}
       name: Github
     - icon: material/email
       link: "mailto:{{ cookiecutter.email }}"

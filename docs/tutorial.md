@@ -80,21 +80,7 @@ Here the project_slug is ppw_0420_01, when you genereate yours, it could be othe
 Also be noticed that there's pyproject.toml in this folder. This is the main
 configuration file of our project.
 
-## Step 3: Build a virtual environment for your development
-Now build a virtual python environment for your development, and develop your project 
-always in that environment from now on.
-
-You can choose either annaconda or virtualenv. I prefer annaconda (actually miniconda) 
-though.
-
-```
-conda create -n mypackage python=3.8
-conda activate mypackage
-conda install -c conda-forge tox-conda
-```
-
-You could choose your favorite python version here. 
-## Step 4: Install Dev Requirements
+## Step 3: Build a Virtual Environment and Install Dev Requirements
 
 You should still be in the folder named as `%proejct_slug`, which containing the
  `pyproject.toml` file.
@@ -134,7 +120,7 @@ We also launch a smoke test here by running `tox`. This will give you a test rep
     machine. Otherwise, remove it from tox.ini and pyproject.toml (search python3.x then
     remove it).
 
-## Step 5: Create a GitHub Repo
+## Step 4: Create a GitHub Repo
 
 Go to your GitHub account and create a new repo named `mypackage`, where
 `mypackage` matches the `[project_slug]` from your answers to running
@@ -143,7 +129,7 @@ cookiecutter.
 Then goto repo > settings > secrets, click on 'New repository secret', add the following
  secrets:
 
-- TEST_PYPI_API_TOKEN, see [How to apply testpypi token]
+- DEV_CODEARTIFACT_ROLE_ARN, see [How to apply testpypi token]
 - PYPI_API_TOKEN, see [How to apply pypi token]
 - PERSONAL_TOKEN, see [How to apply personal token]
 
@@ -224,6 +210,7 @@ new artifact is published under the name {{ cookiecutter.project_slug }}
 
 
 [Edit this file]: https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage/blob/master/docs/tutorial.md
+[poetry]: https://python-poetry.org/
 [Codecov]: https://codecov.io/
 [PYPI]: https://pypi.org
 [GitHub]: https://github.com/

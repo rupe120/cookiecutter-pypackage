@@ -55,8 +55,8 @@
     email  
     Your email address.
 
-    github_username  
-    Your GitHub username.
+    github_user_or_org_name  
+    Your GitHub user or organization name.
 
     project_name  
     The name of your new Python package project. This is used in
@@ -72,9 +72,6 @@
 
     release_date  
     The date of the first release.
-
-    pypi_username  
-    Your Python Package Index account username.
 
     year  
     The year of the initial package copyright in the license file.

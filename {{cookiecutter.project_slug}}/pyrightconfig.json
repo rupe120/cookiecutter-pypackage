@@ -10,7 +10,7 @@
     ".vscode",
     "docs",
     "**/__pycache__",
-    "{{ cookiecutter.github_username }}_{{ cookiecutter.project_slug }}.egg-info"
+    "{{ cookiecutter.github_user_or_org_name }}_{{ cookiecutter.project_slug }}.egg-info"
   ],
 
   "ignore": [

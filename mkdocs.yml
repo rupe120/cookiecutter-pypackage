@@ -1,6 +1,6 @@
-site_name: Python Project Wizard (aws_ppw)
+site_name: AWS Python Project Wizard (aws_ppw)
 repo_url: https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage
-repo_name: Python Project Wizard
+repo_name: AWS Python Project Wizard
 nav:
   - Introduction: index.md
   - Tutorial: tutorial.md
