@@ -3,12 +3,7 @@
 A tool for creating skeleton python project, built with popular develop tools and 
 conform to best practice.
 
-[![Version](http://img.shields.io/pypi/v/aws_ppw?color=brightgreen)](https://pypi.python.org/pypi/aws_ppw)
 [![CI Status](https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage/actions/workflows/release.yml/badge.svg)](https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage)
-[![Dowloads](https://img.shields.io/pypi/dm/aws_ppw)](https://pypi.org/project/aws_ppw/)
-[![License](https://img.shields.io/pypi/l/aws_ppw)](https://opensource.org/licenses/BSD-2-Clause)
-![Python Versions](https://img.shields.io/pypi/pyversions/aws_ppw)
-
 
 ## Features
 

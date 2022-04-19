@@ -1,10 +1,10 @@
 [tool]
 [tool.poetry]
-name = "aws_ppw"
+name = "aws-ppw"
 version = "1.1.7"
-description = "A Wizard to create a skeleton python project with up-to-date technology"
+description = "A Wizard to create a skeleton python project and publish to AWS CodeArtifact"
 license = "BSD-3-Clause"
-authors = ["Aaron Yang <aaron_yang@jieyu.ai>"]
+authors = ["Josh Russo <jrusso@innovativesol.com>"]
 readme = "README.md"
 repository = "https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage"
 documentation = "https://innovativeSol.github.io/innovative-pip-cookiecutter-pypackage/"
@@ -71,4 +71,4 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-aws_ppw = 'aws_ppw.cli:main'
+aws-ppw = 'aws_ppw.cli:main'
