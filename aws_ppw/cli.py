@@ -11,4 +11,5 @@ def main():
     else:
         package_dir = os.path.abspath(os.path.join(cwd, "../{{cookiecutter.project_slug}}/"))
 
-    os.system(f"cookiecutter {package_dir}")
+    if package_dir:
+        os.system(f"cookiecutter {package_dir}")
