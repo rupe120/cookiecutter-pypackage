@@ -10,7 +10,7 @@ def main():
         package_dir = os.path.abspath(os.path.join(cwd, "../{{cookiecutter.project_slug}}/"))
 
     elif len(sys.argv) > 1:        
-        print("Invalid argument(s)")
+        print("Unknown argument(s)")
         print(sys.argv[1:])
 
     else:
