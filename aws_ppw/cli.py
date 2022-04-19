@@ -3,6 +3,7 @@ import sys
 
 def main():
     cwd = os.path.dirname(__file__)
+    package_dir = None
     if sys.argv[0] == "in-place":
         package_dir = os.path.abspath(os.path.join(cwd, "../"))
     elif len(sys.argv) > 0:
