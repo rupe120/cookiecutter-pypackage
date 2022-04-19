@@ -1,7 +1,7 @@
 param(
     [Parameter(Mandatory,
         HelpMessage="Enter a valid version number #.#.#")]
-    [ValidatePattern("(\d+\.)?(\d+\.)?(\d+)")]
+    [ValidatePattern("\d+\.\d+\.\d+")]
     [string]$version,
     [Parameter(Mandatory)]
     [string]$message
