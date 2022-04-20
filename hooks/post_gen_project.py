@@ -38,9 +38,17 @@ def init_git():
 
 def install_pre_commit_hooks():
     execute(sys.executable, "-m", "pip", "install", "pre-commit==2.12.0")
-    execute("pre-commit", "install")
+    execute("pre-commit", "install", cwd = PROJECT_DIRECTORY)
+
+def rename_github_folder():
+   source_folder = os.path.join(PROJECT_DIRECTORY, "github")
+   if os.path.exists(source_folder):
+       target_folder = os.path.join(PROJECT_DIRECTORY, ".github")
+       os.rename(source_folder, target_folder)
 
 if __name__ == '__main__':
+    
+    rename_github_folder()
 
     if '{{ cookiecutter.create_author_file }}' != 'y':
         remove_file('AUTHORS.md')

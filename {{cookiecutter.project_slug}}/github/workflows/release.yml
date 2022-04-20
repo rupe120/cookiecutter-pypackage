@@ -37,7 +37,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-region: {{ cookiecutter.prod_aws_region }}
-          role-to-assume: ${{ secrets.PROD_CODEARTIFACT_ROLE_ARN }}
+          role-to-assume: ${{ " {{secrets.PROD_CODEARTIFACT_ROLE_ARN }}" }}
           role-session-name: RepoPublishPackage
           role-duration-seconds: 900
 
@@ -45,10 +45,10 @@ jobs:
         id: build_changelog
         uses: mikepenz/release-changelog-builder-action@v2.9.0
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ "{{ secrets.GITHUB_TOKEN }}" }}
       - uses: actions/setup-python@v2
         with:
-          python-version: ${{ matrix.python-versions }}
+          python-version: ${{ "{{ matrix.python-versions }}" }}
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -62,7 +62,7 @@ jobs:
       - name: publish documentation
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          personal_token: ${{ "{{ secrets.GITHUB_TOKEN }}" }}
           publish_dir: ./site
 
       - name: Build wheels and source tarball
@@ -77,7 +77,7 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ "{{ secrets.GITHUB_TOKEN }}" }}
         with:
           body_path: ./CHANGELOG.md
           files: dist/*.whl
