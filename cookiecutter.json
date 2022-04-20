@@ -11,7 +11,8 @@
   "project_name": "Python Boilerplate",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "project_short_description": "Skeleton project created by Python Project Wizard (aws_ppw)",
-  "repository_name": "innovative-pip-{{ cookiecutter.project_slug.replace('_', '-') }}",
+  "package_name": "{{ cookiecutter.project_slug.replace('_', '-') }}",
+  "repository_name": "innovative-pip-{{ cookiecutter.package_name }}",
   "version": "0.1.0",
   "use_pytest": "y",
   "add_pyup_badge": "n",
@@ -20,6 +21,5 @@
   "open_source_license": ["MIT", "BSD-3-Clause", "ISC", "Apache-2.0", "GPL-3.0-only", "Not open source"],
   "docstrings_style": ["google", "numpy", "rst"],
   "install_precommit_hooks": "y",
-  "_copy_without_render": ["docs/history.md", "docs/contributing.md", "docs/authors.md", "docs/index.md", ".github/workflows/*.yml"],
-  "__project_package_name": "{{ cookiecutter.project_slug.replace('_', '-') }}"
+  "_copy_without_render": ["docs/history.md", "docs/contributing.md", "docs/authors.md", "docs/index.md", ".github/workflows/*.yml"]
 }
