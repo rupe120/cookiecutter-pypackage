@@ -7,7 +7,7 @@
 } -%}
 [tool]
 [tool.poetry]
-name = "{{ cookiecutter.project_package_name }}"
+name = "{{ cookiecutter.__project_package_name }}"
 version = "{{ cookiecutter.version }}"
 homepage = "https://github.com/{{ cookiecutter.github_user_or_org_name }}/{{ cookiecutter.repository_name }}"
 description = "{{ cookiecutter.project_short_description }}."
@@ -84,7 +84,7 @@ doc = [
 
 {% if cookiecutter.command_line_interface|lower == 'fire' -%}
 [tool.poetry.scripts]
-{{ cookiecutter.project_package_name }} = '{{ cookiecutter.project_slug }}.cli:main'
+{{ cookiecutter.__project_package_name }} = '{{ cookiecutter.project_slug }}.cli:main'
 {%- endif %}
 
 [build-system]
