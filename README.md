@@ -26,7 +26,7 @@ This tool will create Python project with the following features:
 
 ## Quickstart
 
-Install aws_ppw if you haven't install it yet:
+Install aws-ppw if you haven't install it yet:
 
 ``` console
   pip install -U git+https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage
