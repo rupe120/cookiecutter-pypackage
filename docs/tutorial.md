@@ -1,14 +1,11 @@
 # Tutorial
 
 ??? Note
-    Did you find this article confusing? [Edit this file] and pull a request!
+  Did you find this article confusing? [Edit this file] and pull a request!
 
-To start with, you will need [GitHub], [Pypi] , [TestPyPi] and [Codecov] account. If 
-you don't have one, please follow the links to apply one before you get started on this 
-tutorial. 
+To start with, you will need [GitHub], [Pypi] , [TestPyPi] and [Codecov] account. If you don't have one, please follow the links to apply one before you get started on this tutorial.
 
-If you are new to Git and GitHub, you should probably spend a few minutes on
-some of the tutorials at the top of the page at [GitHub Help]
+If you are new to Git and GitHub, you should probably spend a few minutes on some of the tutorials at the top of the page at [GitHub Help]
 
 ## Step 1: Install Python Project Wizard (aws_ppw)
 
@@ -24,16 +21,15 @@ Now it's time to generate your Python package.
 
 Run the following command and feed with answers:
 
-```bash
+``` bash
   aws_ppw
 ```
 
-Finally a new folder will be created under current folder, the name is the answer you
-provided to `project_slug`.
+Finally a new folder will be created under current folder, the name is the answer you provided to `project_slug`.
 
 The project layout should looks like:
 
-```
+``` console
 .
 ├── AUTHORS.md
 ├── CONTRIBUTING.md
@@ -75,18 +71,15 @@ The project layout should looks like:
 └── tox.ini
 ```
 
-Here the project_slug is ppw_0420_01, when you genereate yours, it could be other name.
+Here the project_slug is ppw_0420_01, when you generate yours, it could be other name.
 
-Also be noticed that there's pyproject.toml in this folder. This is the main
-configuration file of our project.
+Also be noticed that there's pyproject.toml in this folder. This is the main configuration file of our project.
 
 ## Step 3: Build a Virtual Environment and Install Dev Requirements
 
-You should still be in the folder named as `%proejct_slug`, which containing the
- `pyproject.toml` file.
+You should still be in the folder named as `%proejct_slug`, which containing the `pyproject.toml` file.
 
-Install the new project's local development requirements inside a
-virtual environment:
+Install the new project's local development requirements inside a virtual environment:
 
 ``` bash
 pip install poetry
@@ -94,37 +87,30 @@ poetry install -E doc -E dev -E test
 tox
 ```
 
-We start with install poetry, since the whole project is managed by poetry. Then we
-installed extra dependency need by developer, such as documentation build tools, lint, 
-formatting and test tools etc.
+We start with install poetry, since the whole project is managed by poetry. Then we installed extra dependency need by developer, such as documentation build tools, lint, formatting and test tools etc.
 
 We also launch a smoke test here by running `tox`. This will give you a test report and
  lint report. You should see no errors except some lint warnings.
 
 ??? Tips
 
-    Extra dependencies are grouped into three groups, doc, dev and test for better 
-    granularity. When you ship the package, dependencies in group doc, dev and test 
-    might not be shipped.
+  Extra dependencies are grouped into three groups, doc, dev and test for better granularity. When you ship the package, dependencies in group doc, dev and test might not be shipped.
 
-    As the developer, you will need install all the dependencies.
+  As the developer, you will need install all the dependencies.
 
 ??? Tips
 
-    if you found erros like the following during tox run:
-    ```
-    ERROR: InterpreterNotFound: python3.9
-    ```
-    don't be panic, this is just because python3.x is not found on your machine. If you
-    decide to support that version of Python in your package, please install it on your
-    machine. Otherwise, remove it from tox.ini and pyproject.toml (search python3.x then
-    remove it).
+  if you found erros like the following during tox run:
+
+  ``` console
+  ERROR: InterpreterNotFound: python3.9
+  ```
+  
+  don't be panic, this is just because python3.x is not found on your machine. If you decide to support that version of Python in your package, please install it on your machine. Otherwise, remove it from tox.ini and pyproject.toml (search python3.x then remove it).
 
 ## Step 4: Create a GitHub Repo
 
-Go to your GitHub account and create a new repo named `mypackage`, where
-`mypackage` matches the `[project_slug]` from your answers to running
-cookiecutter.
+Go to your GitHub account and create a new repo named `mypackage`, where `mypackage` matches the `[project_slug]` from your answers to running cookiecutter.
 
 Then goto repo > settings > secrets, click on 'New repository secret', add the following
  secrets:
@@ -137,21 +123,18 @@ Then goto repo > settings > secrets, click on 'New repository secret', add the f
 
 ???+ Tips
 
-    If you have already setup codecov integration and configured access for all your 
-    repositories, you can skip this step.
+  If you have already setup codecov integration and configured access for all your repositories, you can skip this step.
 
 In your browser, visit [install codecov app], you'll be landed at this page:
 
-![](http://images.jieyu.ai/images/202104/20210419175222.png)
+![CodeCov install](http://images.jieyu.ai/images/202104/20210419175222.png)
 
 Click on the green `install` button at top right, choose `all repositories` then click
 on `install` button, following directions until all set.
 
 ## Step 7: Upload code to github
 
-Back to your develop environment, find the folder named after the `[project_slug]`. 
-Move into this folder, and then setup git to use your GitHub repo and upload the
-code:
+Back to your develop environment, find the folder named after the `[project_slug]`. Move into this folder, and then setup git to use your GitHub repo and upload the code:
 
 ``` bash
 cd mypackage
@@ -171,32 +154,28 @@ You'll need a ssh key to push the repo. You can [Generate] a key or
 
 ???+ Warning
 
-    if you answered 'yes' to the question if install pre-commit hooks at last step, 
-    then you should find pre-commit be invoked when you run `git commit`, and some files
-     may be modified by hooks. If so, please add these files and **commit again**.
+  if you answered 'yes' to the question if install pre-commit hooks at last step, then you should find pre-commit be invoked when you run `git commit`, and some files may be modified by hooks. If so, please add these files and **commit again**.
 
 ### Check result
 
-After pushing your code to github, goto github web page, navigate to your repo, then
-click on actions link, you should find screen like this:
+After pushing your code to github, goto github web page, navigate to your repo, then click on actions link, you should find screen like this:
 
-![](http://images.jieyu.ai/images/202104/20210419170304.png)
+![GitHub Workflows](http://images.jieyu.ai/images/202104/20210419170304.png)
 
 There should be one workflow running. After it finished, go to [testpyi], check if a
 new artifact is published under the name {{ cookiecutter.project_slug }}
 
 ## Step 8. Check documentation
 
-  Documentation will be published and available at 
-  <https://{your_github_account}.github.io/{your_repo}> once:
+  Documentation will be published and available at <https://{your_github_account}.github.io/{your_repo}> once:
 
-    1. the branch is release
-    2. the commit is tagged, and the tag name is started with 'v' (lower case)
-    3. build/testing executed by github CI passed
+  1. the branch is release
+  2. the commit is tagged, and the tag name is started with 'v' (lower case)
+  3. build/testing executed by github CI passed
 
   If you'd like to see what it's look like now, you could run the followng command:
 
-  ```
+  ``` console
   mkdocs gh-deploy
   ```
 
@@ -204,10 +183,7 @@ new artifact is published under the name {{ cookiecutter.project_slug }}
 
 ## Step 9. Make official release
 
-  After done with your phased development, switch to releas branch, following 
-  instructions at [release checklist](/pypi_release_checklist), trigger first official release and check
-  result at [PYPI].
-
+  After done with your phased development, switch to release branch, following instructions at [release checklist](/pypi_release_checklist), trigger first official release and check result at [PYPI].
 
 [Edit this file]: https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage/blob/master/docs/tutorial.md
 [poetry]: https://python-poetry.org/

@@ -1,3 +1,5 @@
+# FAQ
+
 ???+ Question
     # Why github workflow `release & publish` failed?
     We have used a github action `heinrichreimer/github-changelog-generator-action` to
@@ -41,7 +43,7 @@
 
 ???+ Question
     # What are the configuration items?
-    
+
     Here is a list:
 
     ```

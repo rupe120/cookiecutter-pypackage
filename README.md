@@ -1,7 +1,6 @@
 # Python Project Wizard
 
-A tool for creating skeleton python project, built with popular develop tools and 
-conform to best practice.
+A tool for creating skeleton python project, built with popular develop tools and conform to best practice.
 
 [![CI Status](https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage/actions/workflows/release.yml/badge.svg)](https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage)
 
@@ -20,31 +19,30 @@ This tool will create Python project with the following features:
 * [Mkdocstrings]: Auto API doc generation
 * Command line interface using [Python Fire] (optional)
 * Continuouse Integration/Deployment by [github actions], includes:
-    - publish dev build/official release to TestPyPI/PyPI automatically when CI success
-    - publish documents automatically when CI success
-    - extract change log from github and integrate with release notes automatically
+  * publish dev build/official release to TestPyPI/PyPI automatically when CI success
+  * publish documents automatically when CI success
+  * extract change log from github and integrate with release notes automatically
 * Host your documentation from [Git Pages] with zero-config
 
 ## Quickstart
 
 Install aws_ppw if you haven't install it yet:
 
-```
+``` console
   pip install -U git+https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage
 ```
 
 Generate a Python package project by simple run:
 
-```
-  aws_ppw
+``` console
+  aws-ppw
 ```
 
 Then follow **[Tutorial](https://innovativeSol.github.io/innovative-pip-cookiecutter-pypackage/tutorial/)** to finish other configurations.
 
-# Credits
+## Credits
 
 This repo is forked from [zillionare/cookiecutter-pypackage](https://github.com/zillionare/cookiecutter-pypackage), and borrowed some updates from [ma7555](https://github.com/ma7555/cookiecutter-pypackage)
-
 
 [poetry]: https://python-poetry.org/
 [mkdocs]: https://www.mkdocs.org

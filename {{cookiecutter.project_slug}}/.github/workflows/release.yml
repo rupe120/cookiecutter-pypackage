@@ -84,13 +84,6 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: create pypi release
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
-          skip_existing: true
-
       - name: publish to prod
         run: |
           aws codeartifact login --tool twine --domain {{ cookiecutter.prod_aws_codeartifact_domain }} --repository {{ cookiecutter.prod_aws_codeartifact_repository }}
