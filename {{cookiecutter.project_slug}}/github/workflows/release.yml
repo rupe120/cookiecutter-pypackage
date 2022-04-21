@@ -37,7 +37,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-region: {{ cookiecutter.prod_aws_region }}
-          role-to-assume: ${{ " {{secrets.PROD_CODEARTIFACT_ROLE_ARN }}" }}
+          role-to-assume: ${{ "{{ secrets.PROD_CODEARTIFACT_ROLE_ARN }}" }}
           role-session-name: RepoPublishPackage
           role-duration-seconds: 900
 
