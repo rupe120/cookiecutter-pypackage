@@ -1,7 +1,7 @@
 [tool]
 [tool.poetry]
 name = "aws-ppw"
-version = "1.1.21"
+version = "1.1.22"
 description = "A Wizard to create a skeleton python project and publish to AWS CodeArtifact"
 license = "BSD-3-Clause"
 authors = ["Josh Russo <jrusso@innovativesol.com>"]
