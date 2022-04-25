@@ -1,6 +1,6 @@
-# Python Project Wizard
+# Python Project Wizard for AWS CodeArtifact
 
-A tool for creating skeleton python project, built with popular develop tools and conform to best practice.
+A tool for creating skeleton Python project, built with popular develop tools and conform to best practice. The packages are setup to deploy to AWS CodeArtifact.
 
 [![CI Status](https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage/actions/workflows/release.yml/badge.svg)](https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage)
 
@@ -19,7 +19,7 @@ This tool will create Python project with the following features:
 * [Mkdocstrings]: Auto API doc generation
 * Command line interface using [Python Fire] (optional)
 * Continuouse Integration/Deployment by [github actions], includes:
-  * publish dev build/official release to TestPyPI/PyPI automatically when CI success
+  * publish dev build/official release to [AWS CodeArtifact] automatically when CI success
   * publish documents automatically when CI success
   * extract change log from github and integrate with release notes automatically
 * Host your documentation from [Git Pages] with zero-config
@@ -58,3 +58,4 @@ This repo is forked from [zillionare/cookiecutter-pypackage](https://github.com/
 [github actions]: https://github.com/features/actions
 [Git Pages]: https://pages.github.com
 [Pre-commit hooks]: https://pre-commit.com/
+[AWS CodeArtifact] https://docs.aws.amazon.com/codeartifact/latest/ug/welcome.html
