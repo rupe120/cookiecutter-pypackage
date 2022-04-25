@@ -28,18 +28,12 @@
     > ```
 
     ``` powershell
+
     {% include-markdown "../push-version.ps1" %}
+    
     ```
 
-5. Check the PyPI listing page to make sure that the README, release
+5. Check the CodeArtifact listing page to make sure that the README, release
     notes, and roadmap display properly. If tox test passed, this should be ok, since
     we have already run twine check during tox test.
 
-## About This Checklist
-
-This checklist is adapted from:
-
-- <https://gist.github.com/audreyr/5990987>
-- <https://gist.github.com/audreyr/9f1564ea049c14f682f4>
-
-It assumes that you are using all features of CookieCutter PyPackage.
