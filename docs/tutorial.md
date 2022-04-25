@@ -83,7 +83,7 @@ Install the new project's local development requirements inside a virtual enviro
 
 ``` bash
 pip install poetry
-poetry install -E doc -E dev -E test
+poetry install -E dev
 tox
 ```
 

@@ -21,11 +21,15 @@
     > git commit -m "Changelog for upcoming release 0.1.1."
     > ```
 
-4. Update version number. The following are the actions taken in the `push-version.ps1` script at the root of the repository.
+4. Update version number. The following are an example of executing and the contents of the `push-version.ps1` script at the root of the repository.
 
     > ``` powershell
-    > {% include-markdown "../push-version.ps1" %}
+    > .\push-version.ps1 1.1.25 "documentation updates"
     > ```
+
+    ``` powershell
+    {% include-markdown "../push-version.ps1" %}
+    ```
 
 5. Check the PyPI listing page to make sure that the README, release
     notes, and roadmap display properly. If tox test passed, this should be ok, since

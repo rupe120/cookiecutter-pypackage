@@ -2,13 +2,13 @@
 
 Optionally, your package can include a console script using [Fire]
 
-# How It Works
+## How It Works
 
 If the `command_line_interface` option is set to `fire` during setup, cookiecutter
  will add a file `cli.py` in the project_slug subdirectory. An entry point is added to
 pyproject.toml that points to the main function in cli.py.
 
-# Usage
+## Usage
 
 To use the console script in development:
 
@@ -20,13 +20,14 @@ poetry install
 pyproject.toml file
 
 Then execute:
+
 ``` bash
 $your_package_name help
 ```
 
 it will show your package name, project short description and exit.
 
-# More Details
+## More Details
 
 You can read more about Python Fire at [Fire]
 

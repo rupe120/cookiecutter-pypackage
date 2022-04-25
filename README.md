@@ -42,11 +42,9 @@ Generate a Python package project by simple run:
 
 ## Template Information
 
-The CookieCutter template starts with the {{cookiecutter.project_slug}}, and yes the {}s are part of the folder name.
+The CookieCutter template starts with the `{{cookiecutter.project_slug}}`, and yes the {}s are part of the folder name.
 
-The output of the template will be the following. We will use a project_slug of my_project.
-
-The project layout should looks like:
+The output of the template will be the following. We will use a `project_slug` of `my_project`.
 
 ``` console
 .
@@ -94,7 +92,7 @@ The project layout should looks like:
 
 If you look through the contents of the `{{cookiecutter.project_slug}}` folder, you will notice that there is a `github` folder instead of a `.github` folder. This is because CookieCutter does not process files in folders that start with a period. The renaming of this folder is done in the CookieCutter post generation hook found in `hooks/post_gen_project.py`.
 
-As can be seen above, the contents of top level `my_project` will contain a `.git` folder. You can set the origin in this configuration or copy everything except that folder to an empty cloned repository of your choice. To install the pre-commit hooks, make sure to run `pre-commit install` from the root of the repository.
+Notice the contents of top level `my_project` will contain a `.git` folder. You can set the origin in this git configuration or copy everything except that folder to an empty cloned repository of your choice. To install the pre-commit hooks, make sure to run `pre-commit install` from the root of the repository.
 
 Follow **[Tutorial](https://innovativeSol.github.io/innovative-pip-cookiecutter-pypackage/tutorial/)** to finish other configurations.
 
