@@ -1,10 +1,11 @@
 # v1.0
+
 ***first release with the following features:***
 
-1. [Poetry]: Manage version, dependancy, build and release
-2. [Mkdocs]: Writting your docs in markdown style
-3. Testing with [Pytest] (unittest is still supported out of the box)
-4. Code coverage report and endorsed by [Codecov]
+* [Poetry]: Manage version, dependancy, build and release
+* [Mkdocs]: Writting your docs in markdown style
+* Testing with [Pytest] (unittest is still supported out of the box)
+* Code coverage report and endorsed by [Codecov]
 * [Tox]: Test your code against environment matrix, lint and artifact check.
 * Format with [Black] and [Isort]
 * Lint code with [Flake8] and [Flake8-docstrings]
@@ -12,9 +13,9 @@
 * [Mkdocstrings]: Auto API doc generation
 * Command line interface using [Python Fire] (optional)
 * Continuouse Integration/Deployment by [github actions], includes:
-    - publish dev build/official release to TestPyPI/PyPI automatically when CI success
-    - publish documents automatically when CI success
-    - extract change log from github and integrate with release notes automatically
+  * publish dev build/official release to [AWS CodeArtifact] automatically when CI success
+  * publish documents automatically when CI success
+  * extract change log from github and integrate with release notes automatically
 * Host your documentation from [Git Pages] with zero-config
 
 
@@ -32,4 +33,5 @@
 [github actions]: https://github.com/features/actions
 [Git Pages]: https://pages.github.com
 [Pre-commit hooks]: https://pre-commit.com/
+[AWS CodeArtifact]: https://docs.aws.amazon.com/codeartifact/latest/ug/welcome.html
 

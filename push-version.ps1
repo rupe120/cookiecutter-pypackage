@@ -7,8 +7,8 @@ param(
     [string]$message
 )
 
-poetry version $version
-git add -A
+poetry version $version # update the version in pyproject.toml
+git add -A # add the updated pyproject.toml
 git commit -m "v$version"
 git tag v$version -m $message
 git push --atomic origin master v$version

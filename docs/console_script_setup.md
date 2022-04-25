@@ -20,8 +20,8 @@ poetry install
 pyproject.toml file
 
 Then execute:
-```
-    $your_package_name help
+``` bash
+$your_package_name help
 ```
 
 it will show your package name, project short description and exit.

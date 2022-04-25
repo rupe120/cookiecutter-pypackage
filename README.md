@@ -2,6 +2,8 @@
 
 A tool for creating skeleton Python project, built with popular develop tools and conform to best practice. The packages are setup to deploy to AWS CodeArtifact.
 
+The template system used is [CookieCutter].
+
 [![CI Status](https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage/actions/workflows/release.yml/badge.svg)](https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage)
 
 ## Features
@@ -18,7 +20,7 @@ This tool will create Python project with the following features:
 * [Pre-commit hooks]: Formatting/linting anytime when commit/run local tox/CI
 * [Mkdocstrings]: Auto API doc generation
 * Command line interface using [Python Fire] (optional)
-* Continuouse Integration/Deployment by [github actions], includes:
+* Continuous Integration/Deployment by [github actions], includes:
   * publish dev build/official release to [AWS CodeArtifact] automatically when CI success
   * publish documents automatically when CI success
   * extract change log from github and integrate with release notes automatically
@@ -38,12 +40,21 @@ Generate a Python package project by simple run:
   aws-ppw
 ```
 
+## Template Information
+
+The CookieCutter template starts with the {{cookiecutter.project_slug}}, and yes the {}s are part of the folder name.
+
+The output of the template will be the following. We will use a project_slug of my_project.
+
+
+
 Then follow **[Tutorial](https://innovativeSol.github.io/innovative-pip-cookiecutter-pypackage/tutorial/)** to finish other configurations.
 
 ## Credits
 
 This repo is forked from [zillionare/cookiecutter-pypackage](https://github.com/zillionare/cookiecutter-pypackage), and borrowed some updates from [ma7555](https://github.com/ma7555/cookiecutter-pypackage)
 
+[CookieCutter]: https://cookiecutter.readthedocs.io/en/1.7.3/
 [poetry]: https://python-poetry.org/
 [mkdocs]: https://www.mkdocs.org
 [pytest]: https://pytest.org
@@ -58,4 +69,4 @@ This repo is forked from [zillionare/cookiecutter-pypackage](https://github.com/
 [github actions]: https://github.com/features/actions
 [Git Pages]: https://pages.github.com
 [Pre-commit hooks]: https://pre-commit.com/
-[AWS CodeArtifact] https://docs.aws.amazon.com/codeartifact/latest/ug/welcome.html
+[AWS CodeArtifact]: https://docs.aws.amazon.com/codeartifact/latest/ug/welcome.html
