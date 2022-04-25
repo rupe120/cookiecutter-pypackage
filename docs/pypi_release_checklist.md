@@ -21,30 +21,13 @@
     > git commit -m "Changelog for upcoming release 0.1.1."
     > ```
 
-4. Update version number. The following are the actions taken in the `push-version.ps1 script at the root of the repository.
-
-    
+4. Update version number. The following are the actions taken in the `push-version.ps1` script at the root of the repository.
 
     > ``` powershell
     > {% include-markdown "../push-version.ps1" %}
     > ```
 
-5. Push the commit to release branch:
-
-    > ``` bash
-    > git push
-    > ```
-
-6. Push the tags, creating the new release on both GitHub and PyPI:
-
-    > ``` bash
-    > git tag %tag_name%
-    > git push --tags
-    > ```
-
-    tag_name has to be started with 'v'(lower case), to leverage github release workflow.
-
-7. Check the PyPI listing page to make sure that the README, release
+5. Check the PyPI listing page to make sure that the README, release
     notes, and roadmap display properly. If tox test passed, this should be ok, since
     we have already run twine check during tox test.
 
