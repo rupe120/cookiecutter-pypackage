@@ -22,7 +22,7 @@ Now it's time to generate your Python package.
 Run the following command and feed with answers:
 
 ``` bash
-  aws_ppw
+aws_ppw
 ```
 
 Finally a new folder will be created under current folder, the name is the answer you provided to `project_slug`.
