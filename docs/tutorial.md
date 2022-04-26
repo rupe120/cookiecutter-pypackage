@@ -7,12 +7,12 @@ To start with, you will need [GitHub], [Pypi] , [TestPyPi] and [Codecov] account
 
 If you are new to Git and GitHub, you should probably spend a few minutes on some of the tutorials at the top of the page at [GitHub Help]
 
-## Step 1: Install Python Project Wizard (aws_ppw)
+## Step 1: Install Python Project Wizard (aws-ppw)
 
-Install aws_ppw:
+Install aws-ppw:
 
 ``` bash
-pip install aws_ppw
+pip install aws-ppw
 ```
 
 ## Step 2: Generate Your Package
@@ -22,12 +22,12 @@ Now it's time to generate your Python package.
 Run the following command and feed with answers:
 
 ``` bash
-aws_ppw
+aws-ppw
 ```
 
 Finally a new folder will be created under current folder, the name is the answer you provided to `project_slug`.
 
-The project layout should looks like:
+The contents layout should looks like:
 
 ``` console
 .
@@ -45,6 +45,7 @@ The project layout should looks like:
 │   └── usage.md
 ├── .editorconfig
 ├── .flake8
+├── .git
 ├── .github
 │   ├── ISSUE_TEMPLATE.md
 │   └── workflows
@@ -77,7 +78,7 @@ Also be noticed that there's pyproject.toml in this folder. This is the main con
 
 ## Step 3: Build a Virtual Environment and Install Dev Requirements
 
-You should still be in the folder named as `%proejct_slug`, which containing the `pyproject.toml` file.
+You should still be in the folder named as `project_slug`, which containing the `pyproject.toml` file.
 
 Install the new project's local development requirements inside a virtual environment:
 
@@ -94,13 +95,13 @@ We also launch a smoke test here by running `tox`. This will give you a test rep
 
 ??? Tips
 
-  Extra dependencies are grouped into three groups, doc, dev and test for better granularity. When you ship the package, dependencies in group doc, dev and test might not be shipped.
+  Extra dependencies are grouped into the dev group. When you ship the package, dependencies in this group might not be shipped.
 
   As the developer, you will need install all the dependencies.
 
 ??? Tips
 
-  if you found erros like the following during tox run:
+  if you found errors like the following during tox run:
 
   ``` console
   ERROR: InterpreterNotFound: python3.9
@@ -116,8 +117,7 @@ Then goto repo > settings > secrets, click on 'New repository secret', add the f
  secrets:
 
 - DEV_CODEARTIFACT_ROLE_ARN, see [How to apply testpypi token]
-- PYPI_API_TOKEN, see [How to apply pypi token]
-- PERSONAL_TOKEN, see [How to apply personal token]
+- PROD_CODEARTIFACT_ROLE_ARN, see [How to apply testpypi token]
 
 ## Step 6: Set Up codecov integration
 
@@ -146,11 +146,9 @@ git remote add origin git@github.com:myusername/mypackage.git
 git push -u origin main
 ```
 
-Where `myusername` and `mypackage` are adjusted for your username and
-package name.
+Where `myusername` and `mypackage` are adjusted for your username and package name.
 
-You'll need a ssh key to push the repo. You can [Generate] a key or
-[Add] an existing one.
+You'll need an ssh key to push the repo. You can [Generate] a key or [Add] an existing one.
 
 ???+ Warning
 
@@ -162,8 +160,7 @@ After pushing your code to github, goto github web page, navigate to your repo, 
 
 ![GitHub Workflows](http://images.jieyu.ai/images/202104/20210419170304.png)
 
-There should be one workflow running. After it finished, go to [testpyi], check if a
-new artifact is published under the name {{ cookiecutter.project_slug }}
+There should be one workflow running. After it finished, go to the test [CodeArtifact] repository, check if a new artifact is published under the name {{ cookiecutter.project_slug }}
 
 ## Step 8. Check documentation
 
@@ -173,7 +170,7 @@ new artifact is published under the name {{ cookiecutter.project_slug }}
   2. the commit is tagged, and the tag name is started with 'v' (lower case)
   3. build/testing executed by github CI passed
 
-  If you'd like to see what it's look like now, you could run the followng command:
+  If you'd like to see what it's look like now, you could run the following command:
 
   ``` console
   mkdocs gh-deploy
@@ -183,18 +180,15 @@ new artifact is published under the name {{ cookiecutter.project_slug }}
 
 ## Step 9. Make official release
 
-  After done with your phased development, switch to release branch, following instructions at [release checklist](/pypi_release_checklist), trigger first official release and check result at [PYPI].
+  After done with your phased development, switch to release branch, following instructions at [release checklist](/pypi_release_checklist), trigger first official release and check result in [CodeArtifact].
 
 [Edit this file]: https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage/blob/master/docs/tutorial.md
 [poetry]: https://python-poetry.org/
 [Codecov]: https://codecov.io/
-[PYPI]: https://pypi.org
+[CodeArtifact]: https://docs.aws.amazon.com/codeartifact/latest/ug/welcome.html
 [GitHub]: https://github.com/
-[TestPyPI]: https://test.pypi.org/
 [GitHub Help]: https://help.github.com/
 [Generate]: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 [Add]: https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
-[How to apply testpypi token]: https://test.pypi.org/manage/account/
-[How to apply pypi token]: https://pypi.org/manage/account/
 [How to apply personal token]: https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
 [install codecov app]: https://github.com/apps/codecov

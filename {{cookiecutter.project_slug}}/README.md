@@ -15,27 +15,16 @@
 <a href="https://{{ cookiecutter.github_user_or_org_name }}.github.io/{{ cookiecutter.repository_name }}/">
     <img src="https://img.shields.io/website/https/{{ cookiecutter.github_user_or_org_name }}.github.io/{{ cookiecutter.repository_name }}/index.html.svg?label=docs&down_message=unavailable&up_message=available" alt="Documentation Status">
 </a>
-{% if cookiecutter.add_pyup_badge == 'y' %}
-<a href="https://pyup.io/repos/github/{{ cookiecutter.github_user_or_org_name }}/{{ cookiecutter.repository_name }}/">
-<img src="https://pyup.io/repos/github/{{ cookiecutter.github_user_or_org_name }}/{{ cookiecutter.repository_name }}/shield.svg" alt="Updates">
-</a>
-{% endif %}
 </p>
-{% else %}
-{% if cookiecutter.add_pyup_badge == 'y' %}
-<p>
-<a href="https://pyup.io/repos/github/{{ cookiecutter.github_user_or_org_name }}/{{ cookiecutter.repository_name }}/">
-<img src="https://pyup.io/repos/github/{{ cookiecutter.github_user_or_org_name }}/{{ cookiecutter.repository_name }}/shield.svg" alt="Updates">
-</a>
-</p>
-{% endif %}
 {% endif %}
 
 {{ cookiecutter.project_short_description }}
 
 {% if is_open_source %}
+
 * Free software: {{ cookiecutter.open_source_license }}
 * Documentation: <https://{{ cookiecutter.github_user_or_org_name }}.github.io/{{ cookiecutter.repository_name }}/>
+
 {% endif %}
 
 ## Features

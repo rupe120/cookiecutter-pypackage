@@ -24,7 +24,7 @@
 4. Update version number. The following are an example of executing and the contents of the `push-version.ps1` script at the root of the repository.
 
     > ``` powershell
-    > .\push-version.ps1 1.1.25 "documentation updates"
+    > .\push-version.ps1 0.1.1 "documentation updates"
     > ```
 
     ``` powershell

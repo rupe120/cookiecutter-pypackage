@@ -58,7 +58,25 @@
     Your email address.
 
     github_user_or_org_name  
-    Your GitHub user or organization name.
+    Your GitHub user or organization name where the new package repository will be hosted.
+
+    dev_aws_region
+    The AWS region for the dev/test CodeArtifact repository. Defaults to us-east-1
+
+    dev_aws_codeartifact_domain
+    The name of the dev/test CodeArtifact domain.
+
+    dev_aws_codeartifact_repository
+    The name of the dev/test CodeArtifact repository.
+
+    prod_aws_region
+    The AWS region for the production CodeArtifact repository. Defaults to us-east-1
+
+    prod_aws_codeartifact_domain
+    The name of the production CodeArtifact domain.
+
+    prod_aws_codeartifact_repository
+    The name of the production CodeArtifact repository.
 
     project_name  
     The name of your new Python package project. This is used in
@@ -72,35 +90,39 @@
     project_short_description  
     A 1-sentence description of what your Python package does.
 
-    release_date  
-    The date of the first release.
-
-    year  
-    The year of the initial package copyright in the license file.
+    repository_name
+    The GitHub repository name. Defaults to the project_slug with the underscores (_) turned to hyphens (-). 
 
     version  
     The starting version number of the package.
 
-    install_precommit_hooks
-    If you choose yes, then cookiecutter will install pre-commit hooks for you.
+    ## Options
+
+    The following package configuration options set up different features for your project.
+    
+    use_pytest
+    If you choose yes, then Cookiecutter will include unit PyTest unit tests.
+
+    command_line_interface  
+    Whether to create a console script using Python Fire. Console script
+    entry point will match the project_slug. Options: ["fire", "No
+    command-line interface"]
+
+    create_author_file
+    If you choose yes, then Cookiecutter will include an AUTHORS.md file for acknowledging contributors.
+
+    open_source_license
+    Selects an open source license for the package. Options: ["MIT", "BSD-3-Clause", "ISC", "Apache-2.0", "GPL-3.0-only", "Not open source"]
 
     docstrings_style
     one of `google, numpy, rst`. It's required by flake8-docstrings.
 
-    ## Options
+    install_precommit_hooks
+    If you choose yes, then Cookiecutter will attempt to install pre-commit hooks for you.
 
-    The following package configuration options set up different features
-    for your project.
-
-    command_line_interface  
-    Whether to create a console script using Python Fire. Console script
-    entry point will match the project_slug. Options: \['fire', "No
-    command-line interface"\]
     ```
 
     except above settings, for CI/CD, you'll also need configure gitub repsitory secrets
     at page repo > settings > secrtes, and add the following secrets:
 
     - PERSONAL_TOKEN (required for publishing document to git pages)
-    - TEST_PYPI_API_TOKEN (required for publishing dev release to testpypi)
-    - PYPI_API_TOKEN (required for publish )

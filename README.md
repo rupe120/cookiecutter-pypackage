@@ -2,7 +2,7 @@
 
 A tool for creating skeleton Python project, built with popular develop tools and conform to best practice. The packages are setup to deploy to AWS CodeArtifact.
 
-The template system used is [CookieCutter].
+The template system used is [Cookiecutter].
 
 [![CI Status](https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage/actions/workflows/release.yml/badge.svg)](https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage)
 
@@ -42,7 +42,7 @@ Generate a Python package project by simple run:
 
 ## Template Information
 
-The CookieCutter template starts with the `{{cookiecutter.project_slug}}`, and yes the {}s are part of the folder name.
+The Cookiecutter template starts with the `{{cookiecutter.project_slug}}`, and yes the {}s are part of the folder name.
 
 The output of the template will be the following. We will use a `project_slug` of `my_project`.
 
@@ -90,7 +90,7 @@ The output of the template will be the following. We will use a `project_slug` o
     └── tox.ini
 ```
 
-If you look through the contents of the `{{cookiecutter.project_slug}}` folder, you will notice that there is a `github` folder instead of a `.github` folder. This is because CookieCutter does not process files in folders that start with a period. The renaming of this folder is done in the CookieCutter post generation hook found in `hooks/post_gen_project.py`.
+If you look through the contents of the `{{cookiecutter.project_slug}}` folder, you will notice that there is a `github` folder instead of a `.github` folder. This is because Cookiecutter does not process files in folders that start with a period. The renaming of this folder is done in the Cookiecutter post generation hook found in `hooks/post_gen_project.py`.
 
 Notice the contents of top level `my_project` will contain a `.git` folder. You can set the origin in this git configuration or copy everything except that folder to an empty cloned repository of your choice. To install the pre-commit hooks, make sure to run `pre-commit install` from the root of the repository.
 
@@ -100,7 +100,7 @@ Follow **[Tutorial](https://innovativeSol.github.io/innovative-pip-cookiecutter-
 
 This repo is forked from [zillionare/cookiecutter-pypackage](https://github.com/zillionare/cookiecutter-pypackage), and borrowed some updates from [ma7555](https://github.com/ma7555/cookiecutter-pypackage)
 
-[CookieCutter]: https://cookiecutter.readthedocs.io/en/1.7.3/
+[Cookiecutter]: https://cookiecutter.readthedocs.io/en/1.7.3/
 [poetry]: https://python-poetry.org/
 [mkdocs]: https://www.mkdocs.org
 [pytest]: https://pytest.org
