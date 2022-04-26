@@ -44,6 +44,8 @@ Generate a Python package project by simple run:
 
 The Cookiecutter template starts with the `{{cookiecutter.project_slug}}`, and yes the {}s are part of the folder name.
 
+If you look through the contents of the `{{cookiecutter.project_slug}}` folder, you will notice that there is a `github` folder instead of a `.github` folder. This is because Cookiecutter does not process files in folders that start with a period. The renaming of this folder is done in the Cookiecutter post generation hook found in `hooks/post_gen_project.py`.
+
 The output of the template will be the following. We will use a `project_slug` of `my_project`.
 
 ``` console
@@ -89,8 +91,6 @@ The output of the template will be the following. We will use a `project_slug` o
     │   └── test_my_project.py
     └── tox.ini
 ```
-
-If you look through the contents of the `{{cookiecutter.project_slug}}` folder, you will notice that there is a `github` folder instead of a `.github` folder. This is because Cookiecutter does not process files in folders that start with a period. The renaming of this folder is done in the Cookiecutter post generation hook found in `hooks/post_gen_project.py`.
 
 Notice the contents of top level `my_project` will contain a `.git` folder. You can set the origin in this git configuration or copy everything except that folder to an empty cloned repository of your choice. To install the pre-commit hooks, make sure to run `pre-commit install` from the root of the repository.
 
