@@ -58,8 +58,8 @@ The contents layout should looks like:
 ├── mkdocs.yml
 ├── poetry.lock
 ├── ppw_0420_01
-│   ├── cli.py
 │   ├── __init__.py
+│   ├── cli.py
 │   └── ppw_0420_01.py
 ├── .pre-commit-config.yaml
 ├── pyproject.toml
