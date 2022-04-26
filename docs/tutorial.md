@@ -3,7 +3,7 @@
 ???+ Feedback
     Did you find this article confusing? [Edit this file] and pull a request!
 
-To start with, you will need [GitHub], [Pypi] , [TestPyPi] and [Codecov] account. If you don't have one, please follow the links to apply one before you get started on this tutorial.
+To start with, you will need [GitHub], [AWS], and [Codecov] account. If you don't have one, please follow the links to apply one before you get started on this tutorial.
 
 If you are new to Git and GitHub, you should probably spend a few minutes on some of the tutorials at the top of the page at [GitHub Help]
 
@@ -186,6 +186,7 @@ After done with your phased development, switch to release branch, following ins
 [Edit this file]: https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage/blob/master/docs/tutorial.md
 [poetry]: https://python-poetry.org/
 [Codecov]: https://codecov.io/
+[AWS]: https://console.aws.amazon.com/
 [CodeArtifact]: https://docs.aws.amazon.com/codeartifact/latest/ug/welcome.html
 [GitHub]: https://github.com/
 [GitHub Help]: https://help.github.com/
