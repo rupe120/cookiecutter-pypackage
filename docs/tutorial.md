@@ -120,9 +120,11 @@ Then goto repo > settings > secrets, click on 'New repository secret', add the f
 
 ## Step 6: Set Up codecov integration
 
-### Tip
+### Confirm
 
   If you have already setup codecov integration and configured access for all your repositories, you can skip this step.
+
+### Setup
 
 In your browser, visit [install codecov app], you'll be landed at this page:
 
