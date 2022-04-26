@@ -26,14 +26,11 @@
 
 ???+ Question
     # Why not travis CI?
-    Travis CI is a great service, however, github actions is super convenient, less configuration
-    , better integration. Less configuration, less error prone.
+    Travis CI is a great service, however, github actions is super convenient, less configuration , better integration. Less configuration, less error prone.
 
 ???+ Question
     # Why not read the docs?
-    Same reason as above. Git pages is convenient than read the docs, it requires no
-    further configuration, except access token. As to read the docs, you need to
-    write v2 config file, plus several settings on web pages.
+    Same reason as above. Git pages is convenient than read the docs, it requires no further configuration, except access token. As to read the docs, you need to write v2 config file, plus several settings on web pages.
 
 ???+ Question
     # Why mkdocs over sphinx?

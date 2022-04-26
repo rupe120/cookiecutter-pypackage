@@ -2,6 +2,7 @@
 
 ??? Note
   Did you find this article confusing? [Edit this file] and pull a request!
+???
 
 To start with, you will need [GitHub], [Pypi] , [TestPyPi] and [Codecov] account. If you don't have one, please follow the links to apply one before you get started on this tutorial.
 
@@ -94,13 +95,12 @@ We also launch a smoke test here by running `tox`. This will give you a test rep
  lint report. You should see no errors except some lint warnings.
 
 ??? Tips
-
   Extra dependencies are grouped into the dev group. When you ship the package, dependencies in this group might not be shipped.
 
   As the developer, you will need install all the dependencies.
+???
 
 ??? Tips
-
   if you found errors like the following during tox run:
 
   ``` console
@@ -108,7 +108,7 @@ We also launch a smoke test here by running `tox`. This will give you a test rep
   ```
   
   don't be panic, this is just because python3.x is not found on your machine. If you decide to support that version of Python in your package, please install it on your machine. Otherwise, remove it from tox.ini and pyproject.toml (search python3.x then remove it).
-
+???
 ## Step 4: Create a GitHub Repo
 
 Go to your GitHub account and create a new repo named `mypackage`, where `mypackage` matches the `[project_slug]` from your answers to running cookiecutter.
