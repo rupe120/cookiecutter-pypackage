@@ -1,7 +1,7 @@
 # Tutorial
 
 ???+ Feedback
-  Did you find this article confusing? [Edit this file] and pull a request!
+    Did you find this article confusing? [Edit this file] and pull a request!
 
 To start with, you will need [GitHub], [Pypi] , [TestPyPi] and [Codecov] account. If you don't have one, please follow the links to apply one before you get started on this tutorial.
 
@@ -90,15 +90,16 @@ tox
 
 We start with install poetry, since the whole project is managed by poetry. Then we installed extra dependency need by developer, such as documentation build tools, lint, formatting and test tools etc.
 
-We also launch a smoke test here by running `tox`. This will give you a test report and
- lint report. You should see no errors except some lint warnings.
+We also launch a smoke test here by running `tox`. This will give you a test report and lint report. You should see no errors except some lint warnings.
 
-???+ Extra dependencies
+### Extra dependencies
+
   Extra dependencies are grouped into the dev group. When you ship the package, dependencies in this group might not be shipped.
-
+  
   As the developer, you will need install all the dependencies.
 
-???+ Tox errors
+### Tox errors
+
   if you found errors like the following during tox run:
 
   ``` console
@@ -114,12 +115,12 @@ Go to your GitHub account and create a new repo named `mypackage`, where `mypack
 Then goto repo > settings > secrets, click on 'New repository secret', add the following
  secrets:
 
-- DEV_CODEARTIFACT_ROLE_ARN, see [How to apply testpypi token]
-- PROD_CODEARTIFACT_ROLE_ARN, see [How to apply testpypi token]
+- DEV_CODEARTIFACT_ROLE_ARN (Required for AWS access. May already be set as an organization secret.)
+- PROD_CODEARTIFACT_ROLE_ARN (Required for AWS access. May already be set as an organization secret.)
 
 ## Step 6: Set Up codecov integration
 
-???+ Tips
+### Tip
 
   If you have already setup codecov integration and configured access for all your repositories, you can skip this step.
 
@@ -148,37 +149,37 @@ Where `myusername` and `mypackage` are adjusted for your username and package na
 
 You'll need an ssh key to push the repo. You can [Generate] a key or [Add] an existing one.
 
-???+ Warning
+### Notice
 
   if you answered 'yes' to the question if install pre-commit hooks at last step, then you should find pre-commit be invoked when you run `git commit`, and some files may be modified by hooks. If so, please add these files and **commit again**.
 
 ### Check result
 
-After pushing your code to github, goto github web page, navigate to your repo, then click on actions link, you should find screen like this:
+  After pushing your code to github, goto github web page, navigate to your repo, then click on actions link, you should find screen like this:
 
-![GitHub Workflows](http://images.jieyu.ai/images/202104/20210419170304.png)
+  ![GitHub Workflows](http://images.jieyu.ai/images/202104/20210419170304.png)
 
-There should be one workflow running. After it finished, go to the test [CodeArtifact] repository, check if a new artifact is published under the name {{ cookiecutter.project_slug }}
+  There should be one workflow running. After it finished, go to the test [CodeArtifact] repository, check if a new artifact is published under the name {{ cookiecutter.project_slug }}
 
 ## Step 8. Check documentation
 
-  Documentation will be published and available at <https://{your_github_account}.github.io/{your_repo}> once:
+Documentation will be published and available at <https://{your_github_account}.github.io/{your_repo}> once:
 
-  1. the branch is release
-  2. the commit is tagged, and the tag name is started with 'v' (lower case)
-  3. build/testing executed by github CI passed
+1. the branch is release
+2. the commit is tagged, and the tag name is started with 'v' (lower case)
+3. build/testing executed by github CI passed
 
-  If you'd like to see what it's look like now, you could run the following command:
+If you'd like to see what it's look like now, you could run the following command:
 
-  ``` console
-  mkdocs gh-deploy
-  ```
+``` console
+mkdocs gh-deploy
+```
 
-  then check your documentation at <https://{your_github_account}.github.io/{your_repo}>
+then check your documentation at <https://{your_github_account}.github.io/{your_repo}>
 
 ## Step 9. Make official release
 
-  After done with your phased development, switch to release branch, following instructions at [release checklist](/pypi_release_checklist), trigger first official release and check result in [CodeArtifact].
+After done with your phased development, switch to release branch, following instructions at [release checklist](/pypi_release_checklist), trigger first official release and check result in [CodeArtifact].
 
 [Edit this file]: https://github.com/innovativeSol/innovative-pip-cookiecutter-pypackage/blob/master/docs/tutorial.md
 [poetry]: https://python-poetry.org/

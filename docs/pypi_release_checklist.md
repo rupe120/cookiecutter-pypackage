@@ -29,7 +29,7 @@
 
     ``` powershell
 
-    {% include-markdown "../push-version.ps1" %}
+    {% include-markdown "../push-version.ps1" comments=false %}
     
     ```
 

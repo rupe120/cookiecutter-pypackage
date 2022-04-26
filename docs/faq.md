@@ -122,4 +122,5 @@
     except above settings, for CI/CD, you'll also need configure gitub repsitory secrets
     at page repo > settings > secrtes, and add the following secrets:
 
-    - PERSONAL_TOKEN (required for publishing document to git pages)
+    - DEV_CODEARTIFACT_ROLE_ARN (Required for AWS access. May already be set as an organization secret.)
+    - PROD_CODEARTIFACT_ROLE_ARN (Required for AWS access. May already be set as an organization secret.)
