@@ -100,6 +100,7 @@ Follow **[Tutorial](https://innovativeSol.github.io/innovative-pip-cookiecutter-
 
 This repo is forked from [zillionare/cookiecutter-pypackage](https://github.com/zillionare/cookiecutter-pypackage), and borrowed some updates from [ma7555](https://github.com/ma7555/cookiecutter-pypackage)
 
+
 [Cookiecutter]: https://cookiecutter.readthedocs.io/en/1.7.3/
 [poetry]: https://python-poetry.org/
 [mkdocs]: https://www.mkdocs.org
